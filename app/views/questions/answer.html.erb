@@ -1,0 +1,19 @@
+<h1>Answer Page</h1>
+<div class = container>
+  <h2><%= @questions %></h2>
+  <h2> - You</h2>
+</div>
+
+<div class = container>
+  <h2>
+    <% if @questions == "I am going to work" %>
+      <%= "Great!" %>
+    <% elsif @questions.to_s.include? "?" %>
+      <%= "Silly question, get dressed and go to work!" %>
+    <% else %>
+      <%= "I don't care, get dressed and go to work"%>
+    <% end %>
+  </h2>
+  <h2> - Your coach</h2>
+</div>
+<h2><%= link_to "Ask a new question", ask_path %></h2>
